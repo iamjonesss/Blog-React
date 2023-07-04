@@ -5,6 +5,8 @@ import React from 'react';
 import { AppBar, Toolbar, IconButton, Typography, Drawer, List, ListItem, ListItemText, makeStyles } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
+// A função makeStyles é usada para criar uma instância de estilos personalizados
+// Classes de estilo como root, menuButton, title e drawer são usadas para estilizar componentes
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -20,10 +22,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// Criando a função de Navbar
 export const Navbar = () => {
+
+  // A função useStyles é usada para obter as classes de estilo anteriores
   const classes = useStyles();
+
+  // Cria um estado open e uma função setOpen para controlar se o drawer está aberto ou fechado
   const [open, setOpen] = React.useState(false);
 
+  // É uma função que alterna o estado do drawner entre aberto e fechado quando o ícone do menu é clicado
   const handleDrawerToggle = () => {
     setOpen(!open);
   };
@@ -36,7 +44,7 @@ export const Navbar = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Navbar
+            Vukyr
           </Typography>
         </Toolbar>
       </AppBar>
